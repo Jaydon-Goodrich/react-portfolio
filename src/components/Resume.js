@@ -1,6 +1,6 @@
 import React from 'react';
 import resume from '../assests/myresume.pdf';
-
+//resume component
 function Resume(){
     return(
         <>

@@ -1,13 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-
+//Header component
 function Header(props) {
     const { categories = [],
         setCurrentCategory,
         currentCategory } = props;
-    useEffect(() => {
-        document.title = currentCategory.name;
-    }, [currentCategory]);
     return (
         <header className="flex-row">
             <h1>Jaydon Goodrich</h1>

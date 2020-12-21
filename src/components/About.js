@@ -1,6 +1,7 @@
 import React from 'react';
 import aboutImg from '../assests/proPic1.png';
 
+//About component
 function About() {
     return (
         <>

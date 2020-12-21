@@ -2,7 +2,7 @@ import React from 'react';
 import rocket from '../assests/rocket.png';
 import github from '../assests/github111.png';
 
-
+//Portfolio component
 function Portfolio(props){
     const { projects = [] } = props;
     return (

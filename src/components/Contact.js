@@ -38,7 +38,11 @@ function Contact() {
     return (
         <section >
             <h1>Contact me</h1>
-            <form id="contact-form" className="form-fields" onSubmit={handleSubmit}>
+            <h2>Jaydon Goodrich</h2>
+            <p>801-673-5586</p>
+            <p>JaydonGoodrich@gmail.com</p>
+            <h4> Form Coming Soon...</h4>
+            {/* <form id="contact-form" className="form-fields" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="name">Name:</label>
                     <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
@@ -57,7 +61,7 @@ function Contact() {
                     </div>
                 )}
                 <button type="submit" data-testid="button">Submit</button>
-            </form>
+            </form> */}
         </section>
     );
 }

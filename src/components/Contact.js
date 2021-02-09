@@ -29,20 +29,33 @@ function Contact() {
         }
     }
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        console.log(formState);
-    }
+    function submitForm(ev) {
+        ev.preventDefault();
+        const form = ev.target;
+        const data = new FormData(form);
+        const xhr = new XMLHttpRequest();
+        xhr.open(form.method, form.action);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState !== XMLHttpRequest.DONE) return;
+          if (xhr.status === 200) {
+            form.reset();
+          } else {
+            console.log("ERROR");
+          }
+        };
+        xhr.send(data);
+      }
 
 
     return (
         <section >
-            <h1>Contact me</h1>
+            {/* <h1>Contact me</h1>
             <h2>Jaydon Goodrich</h2>
             <p>801-673-5586</p>
             <p>JaydonGoodrich@gmail.com</p>
-            <h4> Form Coming Soon...</h4>
-            {/* <form id="contact-form" className="form-fields" onSubmit={handleSubmit}>
+            <h4> Form Coming Soon...</h4> */}
+            <form id="contact-form" className="form-fields" action="https://formspree.io/f/xyybvvjq" method="POST" onSubmit={submitForm}>
                 <div>
                     <label htmlFor="name">Name:</label>
                     <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
@@ -61,7 +74,7 @@ function Contact() {
                     </div>
                 )}
                 <button type="submit" data-testid="button">Submit</button>
-            </form> */}
+            </form>
         </section>
     );
 }

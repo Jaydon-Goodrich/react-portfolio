@@ -29,7 +29,7 @@ function App() {
     { id: 3, title: 'Note Taker', url: "https://github.com/Jaydon-Goodrich/note-taker", dUrl: "https://peaceful-refuge-43745.herokuapp.com/" },
     { id: 4, title: 'Game Finder', url: "https://github.com/Jaydon-Goodrich/game-finder", dUrl: "https://github.com/Jaydon-Goodrich/game-finder" },
     { id: 5, title: 'Job Finder', url: "https://github.com/Jaydon-Goodrich/job-finder", dUrl: "https://buzzword-job-finder.herokuapp.com/" },
-    { id: 6, title: 'Weather Dashboard', url: "https://github.com/Jaydon-Goodrich/weather-dashboard", dUrl: "https://jaydon-goodrich.github.io/weather-dashboard/" }
+    { id: 6, title: 'Dino Store', url: "https://github.com/Jaydon-Goodrich/dino-store", dUrl: "https://ancient-lake-97986.herokuapp.com/" }
   ])
   //useState to define the categories
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
